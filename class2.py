@@ -4,4 +4,5 @@ def function():
         print("Even")
     else:
         print("Odd")
+
 function()
