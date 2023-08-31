@@ -21,3 +21,22 @@ banana.display()
 
 orange = Fruit("orange", 3.99)
 orange.display()
+
+class Triangle:
+    base = ""
+    height = ""
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def areaTriangle(self):
+        print(self.base * self.height / 2)
+
+t1 = Triangle(10,20)
+t1.areaTriangle()
+
+t2 = Triangle(20,30)
+t2.areaTriangle()
+
+t3 = Triangle(30,40)
+t3.areaTriangle()
