@@ -1,42 +1,55 @@
-# Classes:
-class Fruit:
-    color = ""
-    price = ""
-    # def setvalues(self, color, price):
-    #     self.color = color
-    #     self.price = price
-    def __init__(self, color, price):
-        self.color = color
-        self.price = price
-    def display(self):
-        print(f"Color: {self.color}, Price: {self.price}")
+# Inheritance:
+class yes:
+    def asdlfj(self):
+        print("hello hello")
 
-# If we want to use common properties/variables that is defined in the class, we need to create Object.
+    def fjfjfj(self):
+        print("1233454567")
 
-apple = Fruit("red", 2.99) # Define object; here "apple" is an object
-apple.display()
 
-banana = Fruit("yellow", 1.99)
-banana.display()
 
-orange = Fruit("orange", 3.99)
-orange.display()
+class no(yes):
+    def onetwothree(self):
+        print("qwerty")
 
-class Triangle:
-    base = ""
-    height = ""
-    def __init__(self, base, height):
-        self.base = base
-        self.height = height
+    def hi(self):
+        print("hi")
 
-    def areaTriangle(self):
-        print(self.base * self.height / 2)
+object = no()
+object.fjfjfj()
+object.asdlfj()
 
-t1 = Triangle(10,20)
-t1.areaTriangle()
+# Method Overloading:
+class iphone:
+    def __init__(self):
+        print("ios device")
 
-t2 = Triangle(20,30)
-t2.areaTriangle()
+class samsung(iphone):
+    def __init__(self):
+        super().__init__()
+        print("android device")
 
-t3 = Triangle(30,40)
-t3.areaTriangle()
+sam = samsung()
+
+class Shape:
+    def __init__(self, dim1, dim2):
+        self.dim1 = dim1
+        self.dim2 = dim2
+
+    def area(self):
+        print("This is a super class method")
+
+class Triangle(Shape):
+    def area(self):
+        print(self.dim1 * self.dim2 * 0.5)
+
+
+class Rectangle(Shape):
+    def area(self):
+        print(self.dim1 * self.dim2)
+
+shape1 = Triangle(10, 20)
+shape1.area()
+
+shape2 = Rectangle(30, 100)
+shape2.area()

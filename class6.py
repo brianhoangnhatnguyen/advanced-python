@@ -1,15 +1,14 @@
-class A:
+class one:
     def display(self):
-        print("Class A")
+        print("yup")
 
-class B(A):
+class two:
     def display(self):
-        print("Class B")
+        print("mhm")
 
-class C(B):
+class three(two, one):
     def display(self):
-        print("Class C")
+        print("no")
 
-
-printC = C()
-printC.display()
+tres = three()
+tres.display()

@@ -2,23 +2,41 @@
 class Fruit:
     color = ""
     price = ""
+    # def setvalues(self, color, price):
+    #     self.color = color
+    #     self.price = price
+    def __init__(self, color, price):
+        self.color = color
+        self.price = price
+    def display(self):
+        print(f"Color: {self.color}, Price: {self.price}")
 
 # If we want to use common properties/variables that is defined in the class, we need to create Object.
 
-apple = Fruit() # Define object; here "apple" is an object
-banana = Fruit()
-orange = Fruit()
+apple = Fruit("red", 2.99) # Define object; here "apple" is an object
+apple.display()
 
-apple.color = "Red"
-apple.price = 2.99
+banana = Fruit("yellow", 1.99)
+banana.display()
 
-banana.color = "Yellow"
-banana.price = 5.99
+orange = Fruit("orange", 3.99)
+orange.display()
 
-orange.color = "Orange"
-orange.price = 1.99
+class Triangle:
+    base = ""
+    height = ""
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
 
-# print(isinstance(apple, Fruit))  Variable -> Instance, Property, Attribute
-print(f"Color: {apple.color}, Price: {apple.price}") # {placeholder/container/variable}
-print(f"Color: {banana.color}, Price: {banana.price}")
-print(f"Color: {orange.color}, Price: {orange.price}")
+    def areaTriangle(self):
+        print(self.base * self.height / 2)
+
+t1 = Triangle(10,20)
+t1.areaTriangle()
+
+t2 = Triangle(20,30)
+t2.areaTriangle()
+
+t3 = Triangle(30,40)
+t3.areaTriangle()
