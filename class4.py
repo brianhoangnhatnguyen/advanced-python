@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 # Inheritance:
 class yes:
     def asdlfj(self):
@@ -31,13 +32,14 @@ class samsung(iphone):
 
 sam = samsung()
 
-class Shape:
+class Shape(ABC):
     def __init__(self, dim1, dim2):
         self.dim1 = dim1
         self.dim2 = dim2
 
+    @abstractmethod
     def area(self):
-        print("This is a super class method")
+        pass
 
 class Triangle(Shape):
     def area(self):
@@ -48,8 +50,11 @@ class Rectangle(Shape):
     def area(self):
         print(self.dim1 * self.dim2)
 
-shape1 = Triangle(10, 20)
+shape1 = Triangle(10, 20)   
 shape1.area()
 
 shape2 = Rectangle(30, 100)
 shape2.area()
+
+object = Shape(dim1=123, dim2=123)
+object.area()
