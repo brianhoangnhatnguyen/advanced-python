@@ -1,5 +1,8 @@
+import calendar
 import datetime
 
-i=0
-while i <= 10000000:
-    print(datetime.datetime.now())
+print(datetime.datetime.now())
+calender = int(input("Input the year: "))
+calender2 = int(input("Input the month: "))
+
+print(calendar.month(calender, calender2))
